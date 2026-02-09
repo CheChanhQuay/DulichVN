@@ -660,13 +660,78 @@ body {
     transform: translateY(-2px);
 }
 
-/* Responsive */
+/* Responsive Design */
+
+/* Tablet (iPad, medium screens) */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    /* Hide some polaroids on tablet */
+    .polaroid-photo:nth-child(7),
+    .polaroid-photo:nth-child(8),
+    .polaroid-photo:nth-child(9),
+    .polaroid-photo:nth-child(10) {
+        display: none;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (phones) */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
     }
 
     .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 1rem 2.5rem;
+    }
+
+    /* Hide all polaroids on mobile, keep only first 6 */
+    .polaroid-photo {
+        width: 180px;
+        height: 240px;
+    }
+
+    .polaroid-photo:nth-child(n+7) {
+        display: none;
+    }
+
+    .polaroid-image {
+        height: 150px;
+    }
+
+    .polaroid-caption {
         font-size: 1.1rem;
     }
 
@@ -681,5 +746,54 @@ body {
 
     .nav-links {
         gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-badge {
+        font-size: 0.85rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    /* Hide even more polaroids on small mobile */
+    .polaroid-photo:nth-child(n+5) {
+        display: none;
+    }
+
+    .polaroid-photo {
+        width: 150px;
+        height: 200px;
+    }
+
+    .polaroid-image {
+        height: 120px;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
