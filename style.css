@@ -49,17 +49,16 @@ body {
 }
 
 .logo img {
-    height: 80px;
+    height: 60px;
     width: auto;
     object-fit: contain;
-    position: absolute;
-    top: -20px;
-    left: 0;
-    z-index: 101;
-    /* Thay vì hue-rotate, dùng drop-shadow để tạo viền sáng màu */
-    filter: drop-shadow(0 0 5px rgba(0, 184, 148, 0.8));
-    /* Green Glow */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
     animation: rainbowGlow 3s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1) rotate(5deg);
 }
 
 @keyframes rainbowGlow {
@@ -89,8 +88,6 @@ body {
 }
 
 .logo span {
-    margin-left: 90px;
-    /* Đẩy chữ sang phải để không đè lên logo */
     background: linear-gradient(45deg,
             #ff0000,
             #ff7f00,
@@ -102,14 +99,12 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Chữ trong suốt để hiện nền cầu vồng */
     animation: rainbow 5s ease infinite;
-    /* Hiệu ứng chạy */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     font-weight: 800;
     letter-spacing: 1px;
-    font-size: 1.8rem;
-    /* Tăng 20% */
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 @keyframes rainbow {
@@ -141,8 +136,37 @@ body {
 
 .nav-links a:hover {
     color: #81ecec;
-    /* Mint Blue hover */
     transform: translateY(-2px);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 102;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 /* Hero Section */
@@ -790,6 +814,40 @@ body {
 
 /* Tablet (iPad, medium screens) */
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        background: rgba(9, 132, 227, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
     .hero-title {
         font-size: 3.5rem;
     }
