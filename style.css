@@ -34,10 +34,72 @@ body {
     align-items: center;
 }
 
+/* Logo Styles */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+    font-weight: 700;
+    color: #2d3436;
+    position: relative;
+    /* Context for absolute img */
+}
+
+.logo img {
+    height: 80px;
+    /* Gấp đôi kích thước (40px -> 80px) */
+    width: auto;
+    object-fit: contain;
+    position: absolute;
+    /* Thoát khỏi flow của navbar */
+    top: -20px;
+    /* Đẩy lên để cân giữa hoặc tạo hiệu ứng treo */
+    left: 0;
+    z-index: 101;
+    /* Nổi lên trên */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    /* Bóng đổ nhẹ cho đẹp */
+}
+
+.logo span {
+    margin-left: 90px;
+    /* Đẩy chữ sang phải để không đè lên logo */
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7f00,
+            #ffff00,
+            #00ff00,
+            #ff00ff,
+            /* Magenta instead of Violet/Indigo/Blue */
+            #ff0000);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Chữ trong suốt để hiện nền cầu vồng */
+    animation: rainbow 5s ease infinite;
+    /* Hiệu ứng chạy */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    /* Tăng 20% */
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .nav-links {

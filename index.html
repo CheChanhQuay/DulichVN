@@ -10,6 +10,49 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
+    <meta name="description"
+        content="Khám phá vẻ đẹp Việt Nam qua Travel Blog 2026. Hướng dẫn du lịch Hồ Gươm, Hạ Long, Hội An, Sapa, Phú Quốc... với hình ảnh tuyệt đẹp và kinh nghiệm thực tế.">
+    <meta name="keywords"
+        content="du lịch việt nam, travel blog, hồ gươm, hạ long, hội an, sapa, phú quốc, đà lạt, du lịch 2026, khám phá việt nam">
+    <meta name="author" content="CheChanhQuay">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dulichviet2026.com/">
+    <meta property="og:title" content="Du Lịch Việt - Khám Phá Vẻ Đẹp Bất Tận">
+    <meta property="og:description"
+        content="Trải nghiệm du lịch thực tế ảo với giao diện Liquid Glass độc đáo. Khám phá 12 địa danh nổi tiếng nhất Việt Nam.">
+    <meta property="og:image"
+        content="https://sdl.thuathienhue.gov.vn/UploadFiles/TinTuc/2023/10/16/du_lich_viet_nam_duoc_bao_quoc_te_vinh_danh_nhieu_hang_muc_uy_tin_103855.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dulichviet2026.com/">
+    <meta property="twitter:title" content="Du Lịch Việt - Khám Phá Vẻ Đẹp Bất Tận">
+    <meta property="twitter:description"
+        content="Trải nghiệm du lịch thực tế ảo với giao diện Liquid Glass độc đáo. Khám phá 12 địa danh nổi tiếng nhất Việt Nam.">
+    <meta property="twitter:image"
+        content="https://sdl.thuathienhue.gov.vn/UploadFiles/TinTuc/2023/10/16/du_lich_viet_nam_duoc_bao_quoc_te_vinh_danh_nhieu_hang_muc_uy_tin_103855.jpg">
+
+    <!-- Schema Markup (JSON-LD) for SEO 2026 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Du Lịch Việt",
+      "image": "https://sdl.thuathienhue.gov.vn/UploadFiles/TinTuc/2023/10/16/du_lich_viet_nam_duoc_bao_quoc_te_vinh_danh_nhieu_hang_muc_uy_tin_103855.jpg",
+      "description": "Chuyên trang review và hướng dẫn du lịch Việt Nam với trải nghiệm tương tác cao.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Đường Du Lịch",
+        "addressLocality": "Hà Nội",
+        "addressCountry": "VN"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+    <link rel="icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,7 +60,11 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">🌿 Du Lịch Việt</div>
+            <!-- Logo Thương Hiệu -->
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Du Lịch Việt Logo">
+                <span>CHE TRAVEL</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Trang chủ</a></li>
                 <li><a href="#destinations">Điểm đến</a></li>
@@ -315,7 +362,7 @@
                     <div class="card-image-wrapper">
                         <!-- Thay link ảnh vào src="..." -->
                         <img src="https://onlinebooking.vn/wp-content/uploads/tour-dao-phu-quoc-lan-ngam-san-ho-chup-anh-check-in-4.jpg"
-                            alt="Phú Quốc" class="dest-img">
+                            alt="Phú Quốc" class="dest-img" loading="lazy" decoding="async">
                     </div>
                     <h3>Phú Quốc</h3>
                     <p>Đảo ngọc với bãi biển tuyệt đẹp và làn nước trong xanh</p>
@@ -324,7 +371,7 @@
                     <div class="card-image-wrapper">
                         <!-- Thay link ảnh vào src="..." -->
                         <img src="https://dulichkhatvongviet.com/wp-content/uploads/2018/06/kinh-nghiem-du-lich-tay-bac-thang-12.jpg"
-                            alt="Sapa" class="dest-img">
+                            alt="Sapa" class="dest-img" loading="lazy" decoding="async">
                     </div>
                     <h3>Sapa</h3>
                     <p>Thị trấn miền núi với ruộng bậc thang hùng vĩ</p>
@@ -333,7 +380,7 @@
                     <div class="card-image-wrapper">
                         <!-- Thay link ảnh vào src="..." -->
                         <img src="https://bcp.cdnchinhphu.vn/334894974524682240/2025/9/18/cdhoian5-17581621538711341831070.jpeg"
-                            alt="Hội An" class="dest-img">
+                            alt="Hội An" class="dest-img" loading="lazy" decoding="async">
                     </div>
                     <h3>Hội An</h3>
                     <p>Phố cổ với kiến trúc độc đáo và đèn lồng rực rỡ</p>
@@ -342,7 +389,7 @@
                     <div class="card-image-wrapper">
                         <!-- Thay link ảnh vào src="..." -->
                         <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef6da51f0c0ad991901283c66f347bc9e4685e90a6d43591956557c1247283a022cf57c2a816edb3be3cd0e904b555bd11/halongbay-3501.jpg"
-                            alt="Hạ Long" class="dest-img">
+                            alt="Hạ Long" class="dest-img" loading="lazy" decoding="async">
                     </div>
                     <h3>Hạ Long</h3>
                     <p>Vịnh biển với hàng nghìn đảo đá vôi kỳ thú</p>
