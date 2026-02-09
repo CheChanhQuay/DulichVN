@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Lịch Việt - Khám Phá Vẻ Đẹp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20260209">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🌿 Du Lịch Việt</div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#destinations">Điểm đến</a></li>
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Floating Vietnamese Landmarks as Polaroid Photos -->
+        <div class="floating-icons">
+            <!-- Hồ Gươm -->
+            <div class="polaroid-photo" style="--delay: 0s; --x: 10%; --y: 15%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://xesaoviet.com.vn/wp-content/uploads/2025/08/d.jpg"
+                                alt="Hồ Gươm - Tháp Rùa">
+                        </div>
+                        <div class="polaroid-caption">Hồ Gươm</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Hồ Gươm</h3>
+                        <p>Trung tâm Hà Nội</p>
+                        <p class="info-text">Hồ Hoàn Kiếm với tháp Rùa biểu tượng, nơi lưu giữ huyền thoại thanh gươm
+                            thiêng.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hạ Long -->
+            <div class="polaroid-photo" style="--delay: 1s; --x: 82%; --y: 15%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef6da51f0c0ad991901283c66f347bc9e4685e90a6d43591956557c1247283a022cf57c2a816edb3be3cd0e904b555bd11/halongbay-3501.jpg"
+                                alt="Vịnh Hạ Long">
+                        </div>
+                        <div class="polaroid-caption">Vịnh Hạ Long</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Vịnh Hạ Long</h3>
+                        <p>Di sản thiên nhiên</p>
+                        <p class="info-text">Hàng nghìn đảo đá vôi kỳ thú nổi lên từ biển xanh, tạo nên danh thắng tuyệt
+                            đẹp.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hội An -->
+            <div class="polaroid-photo" style="--delay: 2s; --x: 22%; --y: 38%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://bcp.cdnchinhphu.vn/334894974524682240/2025/9/18/cdhoian5-17581621538711341831070.jpeg"
+                                alt="Phố Cổ Hội An">
+                        </div>
+                        <div class="polaroid-caption">Phố Cổ Hội An</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Phố Cổ Hội An</h3>
+                        <p>Di sản văn hóa</p>
+                        <p class="info-text">Đèn lồng rực rỡ và kiến trúc cổ kính tạo nên phố cổ đẹp nhất Việt Nam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mỹ Sơn -->
+            <div class="polaroid-photo" style="--delay: 1.5s; --x: 83%; --y: 63%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://hoangthanhthanglong.vn/wp-content/uploads/2023/05/myson2.jpg"
+                                alt="Mỹ Sơn">
+                        </div>
+                        <div class="polaroid-caption">Mỹ Sơn</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Mỹ Sơn</h3>
+                        <p>Thánh địa Chăm Pa</p>
+                        <p class="info-text">Quần thể đình tháp Hindu cổ đại, di sản văn hóa thế giới của vương quốc
+                            Chăm Pa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sapa -->
+            <div class="polaroid-photo" style="--delay: 0.5s; --x: 10%; --y: 63%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://dulichkhatvongviet.com/wp-content/uploads/2018/06/kinh-nghiem-du-lich-tay-bac-thang-12.jpg"
+                                alt="Ruộng Bậc Thang Sapa">
+                        </div>
+                        <div class="polaroid-caption">Ruộng Bậc Thang Sapa</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Sapa</h3>
+                        <p>Tây Bắc hùng vĩ</p>
+                        <p class="info-text">Ruộng bậc thang xíu mầu, văn hóa độc đáo và khí hậu mát mẻ quanh năm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Huế -->
+            <div class="polaroid-photo" style="--delay: 2.5s; --x: 70%; --y: 38%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSfKjZ3dKLCqACKCaSCWmar0TcUtWeiWYo9A&s"
+                                alt="Đại Nội Huế">
+                        </div>
+                        <div class="polaroid-caption">Đại Nội Huế</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Đại Nội Huế</h3>
+                        <p>Cố đô Việt Nam</p>
+                        <p class="info-text">Hoàng thành của triều Nguyễn, lưu giữ nhiều di sản kiến trúc và văn hóa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đà Lạt -->
+            <div class="polaroid-photo" style="--delay: 3s; --x: 45%; --y: 8%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://image.vietgoing.com/article/large/8-diem-du-lich-chup-hinh-dep-nhat-o-da-lat.jpg"
+                                alt="Đà Lạt">
+                        </div>
+                        <div class="polaroid-caption">Đà Lạt</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Đà Lạt</h3>
+                        <p>Thành phố ngàn hoa</p>
+                        <p class="info-text">Thành phố sương mù với khí hậu mát mẻ, hoa đà lạt và kiến trúc Pháp cổ
+                            kính.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đà Nẵng -->
+            <div class="polaroid-photo" style="--delay: 3.5s; --x: 58%; --y: 11%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://nads.1cdn.vn/2025/01/10/W_ban-chieu7.jpg" alt="Đà Nẵng">
+                        </div>
+                        <div class="polaroid-caption">Đà Nẵng</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Đà Nẵng</h3>
+                        <p>Thành phố đáng sống</p>
+                        <p class="info-text">Thành phố biển hiện đại với Cầu Vàng, Bãi Mỹ Khê và Ngũ Hành Sơn nổi tiếng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phú Quốc -->
+            <div class="polaroid-photo" style="--delay: 4s; --x: 5%; --y: 42%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://onlinebooking.vn/wp-content/uploads/tour-dao-phu-quoc-lan-ngam-san-ho-chup-anh-check-in-4.jpg"
+                                alt="Phú Quốc">
+                        </div>
+                        <div class="polaroid-caption">Phú Quốc</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Phú Quốc</h3>
+                        <p>Đảo Ngọc Việt Nam</p>
+                        <p class="info-text">Đảo lớn nhất Việt Nam với bãi biển tuyệt đẹp, nước biển trong xanh như
+                            ngọc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tây Ninh -->
+            <div class="polaroid-photo" style="--delay: 4.5s; --x: 88%; --y: 45%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://hnm.1cdn.vn/2023/08/03/a125.jpg" alt="Tây Ninh">
+                        </div>
+                        <div class="polaroid-caption">Tây Ninh</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Tây Ninh</h3>
+                        <p>Thánh địa Cao Đài</p>
+                        <p class="info-text">Tòa Thánh Tây Ninh với kiến trúc độc đáo, núi Bà Đen hùng vĩ và rừng Dầu
+                            Tiếng.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ninh Bình -->
+            <div class="polaroid-photo" style="--delay: 5s; --x: 45%; --y: 73%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://ik.imagekit.io/tvlk/dam/i/01k82q086vxmtqy76w1chxzq3x.jpeg"
+                                alt="Ninh Bình">
+                        </div>
+                        <div class="polaroid-caption">Ninh Bình</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Ninh Bình</h3>
+                        <p>Vịnh Hạ Long trên cạn</p>
+                        <p class="info-text">Tràng An, Tam Cốc với phong cảnh sông nước núi non hữu tình tuyệt đẹp.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cần Thơ -->
+            <div class="polaroid-photo" style="--delay: 5.5s; --x: 25%; --y: 75%;">
+                <div class="polaroid-inner">
+                    <div class="polaroid-front">
+                        <div class="polaroid-image">
+                            <img src="https://cuongdulich.com/assets/posts/1572320406-sapa_2.jpg" alt="Cần Thơ">
+                        </div>
+                        <div class="polaroid-caption">Cần Thơ</div>
+                    </div>
+                    <div class="polaroid-back">
+                        <h3>Cần Thơ</h3>
+                        <p>Trái tim ĐBSCL</p>
+                        <p class="info-text">Chợ nổi Cái Răng sôi động, văn hóa miệt vườn Nam Bộ đặc sắc và ẩm thực
+                            phong phú.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-badge">🌟 Điểm Đến Hàng Đầu 2026</div>
+            <h1 class="hero-title">
+                <span class="title-line">Việt Nam</span>
+                <span class="title-line">Điểm Đến Huyền Diệu</span>
+            </h1>
+            <p class="hero-subtitle">Trải nghiệm những khoảnh khắc kỳ diệu tại xứ sở hình chữ S</p>
+
+            <!-- Stats -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">54</div>
+                    <div class="stat-label">Tỉnh Thành</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Điểm Đến</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3000km</div>
+                    <div class="stat-label">Bờ Biển</div>
+                </div>
+            </div>
+
+            <button class="cta-button">
+                <span>Khám Phá Ngay</span>
+                <span class="button-icon">→</span>
+            </button>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="hero-bg-elements">
+            <div class="bg-circle" style="--size: 300px; --x: 20%; --y: 30%; --duration: 20s;"></div>
+            <div class="bg-circle" style="--size: 200px; --x: 80%; --y: 60%; --duration: 15s;"></div>
+            <div class="bg-circle" style="--size: 150px; --x: 50%; --y: 80%; --duration: 25s;"></div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2 class="section-title">Điểm Đến Phổ Biến</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #ffd480, #d4af37);">
+                        <span class="card-icon">🏖️</span>
+                    </div>
+                    <h3>Phú Quốc</h3>
+                    <p>Đảo ngọc với bãi biển tuyệt đẹp và làn nước trong xanh</p>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #ffb347, #c9302c);">
+                        <span class="card-icon">⛰️</span>
+                    </div>
+                    <h3>Sapa</h3>
+                    <p>Thị trấn miền núi với ruộng bậc thang hùng vĩ</p>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #ffe4b3, #d4af37);">
+                        <span class="card-icon">🏛️</span>
+                    </div>
+                    <h3>Hội An</h3>
+                    <p>Phố cổ với kiến trúc độc đáo và đèn lồng rực rỡ</p>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #ffd480, #c9302c);">
+                        <span class="card-icon">🏞️</span>
+                    </div>
+                    <h3>Hạ Long</h3>
+                    <p>Vịnh biển với hàng nghìn đảo đá vôi kỳ thú</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>Chúng tôi là đội ngũ đam mê du lịch, mong muốn mang đến cho bạn những trải nghiệm tuyệt vời nhất
+                        tại Việt Nam. Với hơn 10 năm kinh nghiệm, chúng tôi cam kết mang đến dịch vụ tốt nhất.</p>
+                    <ul class="features">
+                        <li>✓ Hướng dẫn viên chuyên nghiệp</li>
+                        <li>✓ Giá cả hợp lý</li>
+                        <li>✓ An toàn & tin cậy</li>
+                        <li>✓ Hỗ trợ 24/7</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">🗺️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Tên của bạn" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Nội dung tin nhắn" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Gửi Tin Nhắn</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Du Lịch Việt. Tất cả các quyền được bảo lưu.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
