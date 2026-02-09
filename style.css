@@ -20,12 +20,13 @@ body {
 
 /* Navigation */
 .navbar {
-    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    background: linear-gradient(135deg, #00b894, #0984e3);
+    /* Teal to Blue */
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(220, 38, 38, 0.3);
+    box-shadow: 0 2px 10px rgba(9, 132, 227, 0.3);
 }
 
 .navbar .container {
@@ -49,18 +50,42 @@ body {
 
 .logo img {
     height: 80px;
-    /* Gấp đôi kích thước (40px -> 80px) */
     width: auto;
     object-fit: contain;
     position: absolute;
-    /* Thoát khỏi flow của navbar */
     top: -20px;
-    /* Đẩy lên để cân giữa hoặc tạo hiệu ứng treo */
     left: 0;
     z-index: 101;
-    /* Nổi lên trên */
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-    /* Bóng đổ nhẹ cho đẹp */
+    /* Thay vì hue-rotate, dùng drop-shadow để tạo viền sáng màu */
+    filter: drop-shadow(0 0 5px rgba(0, 184, 148, 0.8));
+    /* Green Glow */
+    animation: rainbowGlow 3s linear infinite;
+}
+
+@keyframes rainbowGlow {
+    0% {
+        filter: drop-shadow(0 0 5px #ff0000);
+    }
+
+    20% {
+        filter: drop-shadow(0 0 5px #ff7f00);
+    }
+
+    40% {
+        filter: drop-shadow(0 0 5px #ffff00);
+    }
+
+    60% {
+        filter: drop-shadow(0 0 5px #00ff00);
+    }
+
+    80% {
+        filter: drop-shadow(0 0 5px #0000ff);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px #ff00ff);
+    }
 }
 
 .logo span {
@@ -72,7 +97,6 @@ body {
             #ffff00,
             #00ff00,
             #ff00ff,
-            /* Magenta instead of Violet/Indigo/Blue */
             #ff0000);
     background-size: 300% 300%;
     -webkit-background-clip: text;
@@ -116,14 +140,16 @@ body {
 }
 
 .nav-links a:hover {
-    color: #fef3c7;
+    color: #81ecec;
+    /* Mint Blue hover */
     transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 20%, #fcd34d 40%, #f59e0b 70%, #dc2626 100%);
+    background: linear-gradient(135deg, #81ecec 0%, #74b9ff 40%, #0984e3 100%);
+    /* Cool Water Gradient */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,7 +163,7 @@ body {
     position: absolute;
     width: 150%;
     height: 150%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: float 20s linear infinite;
 }
@@ -224,11 +250,13 @@ body {
     text-align: center;
     padding: 20px;
     background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    /* Original warm back */
 }
 
 .polaroid-back h3 {
     font-size: 1.6rem;
     color: #dc2626;
+    /* Original Red title */
     margin-bottom: 10px;
     font-weight: 700;
 }
@@ -236,6 +264,7 @@ body {
 .polaroid-back p {
     font-size: 1rem;
     color: #f59e0b;
+    /* Original Gold highlight */
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -275,7 +304,7 @@ body {
     text-align: center;
     font-size: 1.4rem;
     font-weight: 600;
-    color: #333;
+    color: #2d3436;
     margin-top: 16px;
     letter-spacing: 0.3px;
 }
@@ -317,7 +346,7 @@ body {
     height: var(--size);
     left: var(--x);
     top: var(--y);
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
     border-radius: 50%;
     animation: pulse var(--duration) ease-in-out infinite;
 }
@@ -368,8 +397,10 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     animation: slideDown 1s ease 0.2s backwards;
+    color: white;
+    /* Changed from #006266 to white */
 }
 
 @keyframes slideDown {
@@ -388,7 +419,7 @@ body {
 .hero-title {
     font-size: 4.8rem;
     margin-bottom: 1.2rem;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
     font-weight: 800;
     line-height: 1.1;
 }
@@ -404,7 +435,7 @@ body {
 
 .title-line:nth-child(2) {
     animation-delay: 0.5s;
-    background: linear-gradient(90deg, #ffffff, #fffef5);
+    background: linear-gradient(90deg, #ffffff, #dff9fb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -428,6 +459,8 @@ body {
     margin-bottom: 2rem;
     opacity: 0.95;
     animation: fadeInUp 1s ease 0.7s backwards;
+    color: white;
+    /* Changed from #006266 to white */
 }
 
 /* Modal Footer */
@@ -440,7 +473,7 @@ body {
     /* Align right */
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Hero Stats */
@@ -460,7 +493,7 @@ body {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 0.3rem;
-    background: linear-gradient(135deg, #fff, #fcd34d);
+    background: linear-gradient(135deg, #fff, #81ecec);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -471,12 +504,15 @@ body {
     opacity: 0.9;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: white;
+    /* Changed from #006266 to white */
 }
 
 /* CTA Button */
 .cta-button {
     background: white;
-    color: #dc2626;
+    color: #00b894;
+    /* Mint Green Text */
     border: none;
     padding: 1.2rem 3rem;
     font-size: 1.32rem;
@@ -484,7 +520,7 @@ body {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
@@ -501,7 +537,7 @@ body {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(220, 38, 38, 0.1);
+    background: rgba(0, 184, 148, 0.1);
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
 }
@@ -513,7 +549,8 @@ body {
 
 .cta-button:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 184, 148, 0.4);
+    color: #00cec9;
 }
 
 .button-icon {
@@ -528,14 +565,16 @@ body {
 /* Destinations Section */
 .destinations {
     padding: 5rem 0;
-    background: #fffbf0;
+    background: #f0fdf4;
+    /* Very Light Mint Background */
 }
 
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #dc2626;
+    color: #00b894;
+    /* Main Mint Color */
 }
 
 .destination-grid {
@@ -549,7 +588,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 15px rgba(9, 132, 227, 0.1);
     border: 12px solid white;
     position: relative;
 }
@@ -567,7 +606,7 @@ body {
 
 .destination-card:hover {
     transform: translateY(-10px) rotate(2deg);
-    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 12px 30px rgba(9, 132, 227, 0.2);
 }
 
 /* Destination Image Styles */
@@ -621,7 +660,8 @@ body {
 
 .about-text h2 {
     font-size: 2.5rem;
-    color: #c9302c;
+    color: #00b894;
+    /* Mint */
     margin-bottom: 1.5rem;
 }
 
@@ -639,7 +679,8 @@ body {
 .features li {
     padding: 0.5rem 0;
     font-size: 1.1rem;
-    color: #d4af37;
+    color: #00cec9;
+    /* Robin's Egg Blue */
 }
 
 .about-image {
@@ -651,7 +692,8 @@ body {
 .image-placeholder {
     width: 100%;
     height: 400px;
-    background: linear-gradient(135deg, #ffe4b3, #d4af37);
+    background: linear-gradient(135deg, #81ecec, #00b894);
+    /* Fresh Gradient */
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -662,7 +704,8 @@ body {
 /* Contact Section */
 .contact {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #fff5e6, #ffe4b3);
+    background: linear-gradient(135deg, #dff9fb, #b2bec3);
+    /* Cool Gray-Blue */
 }
 
 .contact-form {
@@ -671,7 +714,7 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 15px rgba(9, 132, 227, 0.15);
 }
 
 .form-group {
@@ -682,7 +725,7 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #ffe4b3;
+    border: 2px solid #81ecec;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -691,12 +734,12 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #d4af37;
+    border-color: #00b894;
 }
 
 .submit-button {
     width: 100%;
-    background: linear-gradient(135deg, #d4af37, #c9302c);
+    background: linear-gradient(135deg, #00b894, #0984e3);
     color: white;
     border: none;
     padding: 1rem;
@@ -709,12 +752,13 @@ body {
 
 .submit-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.4);
 }
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #c9302c, #a02622);
+    background: linear-gradient(135deg, #0984e3, #2d3436);
+    /* Deep Blue to Dark Grey */
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -738,7 +782,7 @@ body {
 }
 
 .social-links a:hover {
-    color: #e8f5e9;
+    color: #81ecec;
     transform: translateY(-2px);
 }
 
