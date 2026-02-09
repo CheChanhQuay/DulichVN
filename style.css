@@ -368,6 +368,19 @@ body {
     animation: fadeInUp 1s ease 0.7s backwards;
 }
 
+/* Modal Footer */
+.modal-footer {
+    clear: both;
+    /* Fix for float layout */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* Align right */
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 /* Hero Stats */
 .hero-stats {
     display: flex;
@@ -495,33 +508,40 @@ body {
     box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
 }
 
-.card-image {
+/* Destination Image Styles */
+.card-image-wrapper {
+    width: 100%;
     height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* Fixed height for consistency */
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    /* Top rounded corners */
 }
 
-.card-icon {
-    font-size: 4rem;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+.dest-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crop image to fill container */
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.destination-card:hover .dest-img {
+    transform: scale(1.1);
+    /* Zoom effect on hover */
 }
 
 .destination-card h3 {
-    padding: 1rem 1.5rem 0.5rem;
-    color: #c9302c;
+    margin-top: 1rem;
     font-size: 1.5rem;
-    position: relative;
-    z-index: 2;
-    background: white;
+    color: #2d3436;
 }
 
 .destination-card p {
-    padding: 0 1.5rem 1.5rem;
-    color: #666;
-    position: relative;
-    z-index: 2;
-    background: white;
+    font-size: 0.95rem;
+    color: #636e72;
+    padding: 0 1rem 1.5rem;
 }
 
 /* About Section */
@@ -805,5 +825,470 @@ body {
 
     .section-title {
         font-size: 1.8rem;
+    }
+}
+
+/* Modal Popup Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    width: 70%;
+    max-width: 900px;
+    max-height: 85vh;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    backdrop-filter: blur(40px) saturate(180%) brightness(1.1);
+    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.1);
+    border-radius: 30px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 30px 60px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 0.5px rgba(255, 255, 255, 0.6),
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    border: 0.5px solid rgba(255, 255, 255, 0.4);
+    animation: slideUp 0.4s ease, liquidShimmer 3s ease-in-out infinite;
+}
+
+@keyframes liquidShimmer {
+
+    0%,
+    100% {
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.1),
+            0 30px 60px rgba(0, 0, 0, 0.15),
+            inset 0 0 0 0.5px rgba(255, 255, 255, 0.6),
+            inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+
+    50% {
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.12),
+            0 30px 60px rgba(0, 0, 0, 0.18),
+            inset 0 0 0 0.5px rgba(255, 255, 255, 0.7),
+            inset 0 1px 3px rgba(255, 255, 255, 0.9);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ff5252;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.modal-close:hover {
+    background: #ff5252;
+    color: white;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 82, 82, 0.6);
+}
+
+#modalBody {
+    padding: 2.5rem;
+    /* Restore padding for content */
+    height: 100%;
+    overflow-y: auto;
+    /* Allow scroll if needed but layout minimizes it */
+    display: block;
+    /* Block for float to work */
+}
+
+/* Custom Scrollbar for sleek look */
+#modalBody::-webkit-scrollbar {
+    width: 6px;
+}
+
+#modalBody::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#modalBody::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+#modalBody::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.modal-landmark {
+    display: none;
+}
+
+.modal-landmark.active {
+    display: block;
+    /* Normal block flow */
+}
+
+.modal-image {
+    float: left;
+    /* Key: Float image to let text wrap */
+    width: 42%;
+    height: auto;
+    max-height: 400px;
+    /* Limit height to allow wrapping */
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    /* Rounded corners back */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    shape-outside: margin-box;
+    /* Smooth wrapping */
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.modal-info {
+    width: 100%;
+    /* Take full width but respect float */
+    padding: 0;
+    /* No extra padding needed */
+    display: block;
+}
+
+/* Typography Adjustments */
+/* Modal Header Layout */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.modal-info h2 {
+    font-family: 'Playfair Display', serif;
+    /* Elegant Serif Font */
+    font-size: 2.6rem;
+    color: #ff5252;
+    margin: 0;
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(255, 82, 82, 0.5);
+    line-height: 1.1;
+    flex: 1;
+    letter-spacing: -0.5px;
+}
+
+.modal-location {
+    font-family: 'Nunito', sans-serif;
+    /* Modern Round Body Font */
+    font-size: 1.15rem;
+    color: #ffd700;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    display: block;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* Large Booking Button Styles - Premium Redesign */
+.booking-btn-large {
+    background: linear-gradient(90deg, #ff5252, #ff1744);
+    color: #ffffff;
+    border: none;
+    padding: 1.2rem 3.5rem;
+    /* Larger padding */
+    border-radius: 50px;
+    font-size: 1.4rem;
+    /* Larger font */
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(255, 23, 68, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    animation: pulseBtn 2s infinite;
+}
+
+.booking-btn-large span {
+    color: #ffd700;
+    /* Gold Icon */
+    font-size: 1.8rem;
+    /* Larger Icon */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.booking-btn-large::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.booking-btn-large:hover::before {
+    left: 100%;
+}
+
+.booking-btn-large:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 23, 68, 0.6);
+    background: linear-gradient(90deg, #ff1744, #d50000);
+}
+
+.booking-btn-large:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+@keyframes pulseBtn {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 23, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 23, 68, 0);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .modal-footer {
+        justify-content: center;
+    }
+
+    .booking-btn-large {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Booking Button Styles */
+.booking-btn {
+    background: rgba(255, 82, 82, 0.15);
+    color: #ff5252;
+    border: 1px solid rgba(255, 82, 82, 0.5);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 82, 82, 0.1);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.booking-btn:hover {
+    background: #ff5252;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 82, 82, 0.6);
+    transform: translateY(-2px) scale(1.05);
+    border-color: #ff5252;
+}
+
+.booking-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Mobile Adjustments for Header */
+@media (max-width: 768px) {
+    .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}
+
+.modal-description h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #ff7675;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    clear: none;
+    /* Allow text to sit beside image */
+}
+
+.modal-description p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+}
+
+.modal-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 0.8rem;
+}
+
+.modal-description ul li {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-left: 3px solid #fcd34d;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.modal-description ul li:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Text Clear Fix if needed for very long content */
+.modal-description::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* New Fonts for Buttons */
+.booking-btn,
+.booking-btn-large {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Smooth Animation Items */
+.animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Enhance movement */
+    transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.animate-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    #modalBody {
+        padding: 1.5rem;
+    }
+
+    .modal-landmark.active {
+        display: block;
+        height: auto;
+    }
+
+    .modal-image {
+        float: none;
+        width: 100%;
+        max-height: 250px;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .modal-info {
+        width: 100%;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .modal-info h2 {
+        margin-top: 0;
+    }
+
+    .modal-description ul {
+        grid-template-columns: 1fr;
     }
 }

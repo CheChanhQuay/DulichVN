@@ -7,9 +7,10 @@
     <title>Du Lịch Việt - Khám Phá Vẻ Đẹp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260209">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,7 +32,8 @@
         <!-- Floating Vietnamese Landmarks as Polaroid Photos -->
         <div class="floating-icons">
             <!-- Hồ Gươm -->
-            <div class="polaroid-photo" style="--delay: 0s; --x: 10%; --y: 15%;">
+            <div class="polaroid-photo" style="--delay: 0s; --x: 10%; --y: 15%;" onclick="openModal('hoguom')"
+                data-landmark="hoguom">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -50,7 +52,8 @@
             </div>
 
             <!-- Hạ Long -->
-            <div class="polaroid-photo" style="--delay: 1s; --x: 82%; --y: 15%;">
+            <div class="polaroid-photo" style="--delay: 1s; --x: 82%; --y: 15%;" onclick="openModal('halong')"
+                data-landmark="halong">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -69,7 +72,8 @@
             </div>
 
             <!-- Hội An -->
-            <div class="polaroid-photo" style="--delay: 2s; --x: 22%; --y: 38%;">
+            <div class="polaroid-photo" style="--delay: 2s; --x: 22%; --y: 38%;" onclick="openModal('hoian')"
+                data-landmark="hoian">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -87,7 +91,8 @@
             </div>
 
             <!-- Mỹ Sơn -->
-            <div class="polaroid-photo" style="--delay: 1.5s; --x: 83%; --y: 63%;">
+            <div class="polaroid-photo" style="--delay: 1.5s; --x: 83%; --y: 63%;" onclick="openModal('myson')"
+                data-landmark="myson">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -106,7 +111,8 @@
             </div>
 
             <!-- Sapa -->
-            <div class="polaroid-photo" style="--delay: 0.5s; --x: 10%; --y: 63%;">
+            <div class="polaroid-photo" style="--delay: 0.5s; --x: 10%; --y: 63%;" onclick="openModal('sapa')"
+                data-landmark="sapa">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -124,7 +130,8 @@
             </div>
 
             <!-- Huế -->
-            <div class="polaroid-photo" style="--delay: 2.5s; --x: 70%; --y: 38%;">
+            <div class="polaroid-photo" style="--delay: 2.5s; --x: 70%; --y: 38%;" onclick="openModal('hue')"
+                data-landmark="hue">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -143,7 +150,8 @@
             </div>
 
             <!-- Đà Lạt -->
-            <div class="polaroid-photo" style="--delay: 3s; --x: 45%; --y: 8%;">
+            <div class="polaroid-photo" style="--delay: 3s; --x: 45%; --y: 8%;" onclick="openModal('dalat')"
+                data-landmark="dalat">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -162,7 +170,8 @@
             </div>
 
             <!-- Đà Nẵng -->
-            <div class="polaroid-photo" style="--delay: 3.5s; --x: 58%; --y: 11%;">
+            <div class="polaroid-photo" style="--delay: 3.5s; --x: 58%; --y: 11%;" onclick="openModal('danang')"
+                data-landmark="danang">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -180,7 +189,8 @@
             </div>
 
             <!-- Phú Quốc -->
-            <div class="polaroid-photo" style="--delay: 4s; --x: 5%; --y: 42%;">
+            <div class="polaroid-photo" style="--delay: 4s; --x: 5%; --y: 42%;" onclick="openModal('phuquoc')"
+                data-landmark="phuquoc">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -199,7 +209,8 @@
             </div>
 
             <!-- Tây Ninh -->
-            <div class="polaroid-photo" style="--delay: 4.5s; --x: 88%; --y: 45%;">
+            <div class="polaroid-photo" style="--delay: 4.5s; --x: 88%; --y: 45%;" onclick="openModal('tayninh')"
+                data-landmark="tayninh">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -217,7 +228,8 @@
             </div>
 
             <!-- Ninh Bình -->
-            <div class="polaroid-photo" style="--delay: 5s; --x: 45%; --y: 73%;">
+            <div class="polaroid-photo" style="--delay: 5s; --x: 45%; --y: 73%;" onclick="openModal('ninhbinh')"
+                data-landmark="ninhbinh">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -235,7 +247,8 @@
             </div>
 
             <!-- Cần Thơ -->
-            <div class="polaroid-photo" style="--delay: 5.5s; --x: 25%; --y: 75%;">
+            <div class="polaroid-photo" style="--delay: 5.5s; --x: 25%; --y: 75%;" onclick="openModal('cantho')"
+                data-landmark="cantho">
                 <div class="polaroid-inner">
                     <div class="polaroid-front">
                         <div class="polaroid-image">
@@ -299,29 +312,37 @@
             <h2 class="section-title">Điểm Đến Phổ Biến</h2>
             <div class="destination-grid">
                 <div class="destination-card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #ffd480, #d4af37);">
-                        <span class="card-icon">🏖️</span>
+                    <div class="card-image-wrapper">
+                        <!-- Thay link ảnh vào src="..." -->
+                        <img src="https://onlinebooking.vn/wp-content/uploads/tour-dao-phu-quoc-lan-ngam-san-ho-chup-anh-check-in-4.jpg"
+                            alt="Phú Quốc" class="dest-img">
                     </div>
                     <h3>Phú Quốc</h3>
                     <p>Đảo ngọc với bãi biển tuyệt đẹp và làn nước trong xanh</p>
                 </div>
                 <div class="destination-card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #ffb347, #c9302c);">
-                        <span class="card-icon">⛰️</span>
+                    <div class="card-image-wrapper">
+                        <!-- Thay link ảnh vào src="..." -->
+                        <img src="https://dulichkhatvongviet.com/wp-content/uploads/2018/06/kinh-nghiem-du-lich-tay-bac-thang-12.jpg"
+                            alt="Sapa" class="dest-img">
                     </div>
                     <h3>Sapa</h3>
                     <p>Thị trấn miền núi với ruộng bậc thang hùng vĩ</p>
                 </div>
                 <div class="destination-card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #ffe4b3, #d4af37);">
-                        <span class="card-icon">🏛️</span>
+                    <div class="card-image-wrapper">
+                        <!-- Thay link ảnh vào src="..." -->
+                        <img src="https://bcp.cdnchinhphu.vn/334894974524682240/2025/9/18/cdhoian5-17581621538711341831070.jpeg"
+                            alt="Hội An" class="dest-img">
                     </div>
                     <h3>Hội An</h3>
                     <p>Phố cổ với kiến trúc độc đáo và đèn lồng rực rỡ</p>
                 </div>
                 <div class="destination-card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #ffd480, #c9302c);">
-                        <span class="card-icon">🏞️</span>
+                    <div class="card-image-wrapper">
+                        <!-- Thay link ảnh vào src="..." -->
+                        <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef6da51f0c0ad991901283c66f347bc9e4685e90a6d43591956557c1247283a022cf57c2a816edb3be3cd0e904b555bd11/halongbay-3501.jpg"
+                            alt="Hạ Long" class="dest-img">
                     </div>
                     <h3>Hạ Long</h3>
                     <p>Vịnh biển với hàng nghìn đảo đá vôi kỳ thú</p>
@@ -382,6 +403,427 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Popup for Landmark Details -->
+    <div id="landmarkModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+
+            <div id="modalBody">
+                <!-- Hồ Gươm Content -->
+                <div class="modal-landmark" id="modal-hoguom">
+                    <div class="modal-image">
+                        <img src="https://xesaoviet.com.vn/wp-content/uploads/2025/08/d.jpg" alt="Hồ Gươm">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Hồ Hoàn Kiếm (Hồ Gươm)</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Quận Hoàn Kiếm, Hà Nội</p>
+
+                        <div class="modal-description">
+                            <h3 class="animate-item">Giới Thiệu</h3>
+                            <p class="animate-item">Hồ Hoàn Kiếm, hay còn gọi là Hồ Gươm, là biểu tượng văn hóa và lịch
+                                sử của thủ đô Hà Nội.
+                                Hồ nằm ở trung tâm thành phố, được bao quanh bởi những hàng cây xanh mát và các công
+                                trình kiến trúc cổ kính.</p>
+
+                            <h3 class="animate-item">Huyền Thoại</h3>
+                            <p class="animate-item">Theo truyền thuyết, vua Lê Lợi đã nhận thanh gươm thiêng từ Rùa thần
+                                để đánh đuổi quân
+                                Minh. Sau khi thắng trận, vua trả lại gươm cho Rùa thần tại hồ này, từ đó hồ mang tên
+                                Hoàn Kiếm (Trả lại gươm).</p>
+
+                            <h3 class="animate-item">Điểm Nổi Bật</h3>
+                            <ul class="animate-item">
+                                <li>🏯 <strong>Tháp Rùa:</strong> Biểu tượng của Hà Nội, tọa lạc giữa hồ</li>
+                                <li>🌉 <strong>Cầu Thê Húc:</strong> Cầu gỗ đỏ dẫn vào đền Ngọc Sơn</li>
+                                <li>🏛️ <strong>Đền Ngọc Sơn:</strong> Di tích lịch sử văn hóa quan trọng</li>
+                                <li>🌳 <strong>Không gian xanh:</strong> Điểm vui chơi, tập thể dục của người dân</li>
+                            </ul>
+
+                            <h3 class="animate-item">Thời Gian Tham Quan</h3>
+                            <p class="animate-item">🕐 Cả ngày • Miễn phí tham quan quanh hồ</p>
+                            <p class="animate-item">🎫 Đền Ngọc Sơn: 30,000đ/người</p>
+                        </div>
+
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vịnh Hạ Long -->
+                <div class="modal-landmark" id="modal-halong">
+                    <div class="modal-image">
+                        <img src="https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef6da51f0c0ad991901283c66f347bc9e4685e90a6d43591956557c1247283a022cf57c2a816edb3be3cd0e904b555bd11/halongbay-3501.jpg"
+                            alt="Vịnh Hạ Long">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Vịnh Hạ Long</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Quảng Ninh, Việt Nam</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Kỳ Quan Thiên Nhiên</h3>
+                            <p class="animate-item">Vịnh Hạ Long là di sản thiên nhiên thế giới được UNESCO công nhận,
+                                nổi tiếng với hàng nghìn đảo đá vôi khổng lồ mọc lên từ mặt nước xanh ngọc bích, tạo nên
+                                khung cảnh huyền ảo như tranh thủy mặc.</p>
+                            <h3 class="animate-item">Truyền Thuyết</h3>
+                            <p class="animate-item">Tương truyền khi giặc ngoại xâm tấn công, Rồng Mẹ và Đàn Rồng Con đã
+                                hạ phàm, phun châu nhả ngọc tạo thành muôn ngàn đảo đá chặn đứng thuyền giặc, từ đó có
+                                tên Hạ Long (Rồng xuống).</p>
+                            <h3 class="animate-item">Điểm Nổi Bật</h3>
+                            <ul class="animate-item">
+                                <li>🐉 <strong>Hang Sửng Sốt:</strong> Hang động đẹp và lớn nhất vịnh</li>
+                                <li>🏝️ <strong>Đảo Ti Tốp:</strong> Bãi tắm đẹp và điểm ngắm toàn cảnh</li>
+                                <li>🚣 <strong>Làng chài Cửa Vạn:</strong> Văn hóa sông nước độc đáo</li>
+                            </ul>
+                            <h3 class="animate-item">Thông Tin Tham Quan</h3>
+                            <p class="animate-item">🚢 Du thuyền 5 sao: Từ 2.500.000đ/người</p>
+                            <p class="animate-item">🎫 Vé tham quan: 290.000đ/người</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phố Cổ Hội An -->
+                <div class="modal-landmark" id="modal-hoian">
+                    <div class="modal-image">
+                        <img src="https://bcp.cdnchinhphu.vn/334894974524682240/2025/9/18/cdhoian5-17581621538711341831070.jpeg"
+                            alt="Phố Cổ Hội An">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Phố Cổ Hội An</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Quảng Nam, Việt Nam</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Di Sản Văn Hóa</h3>
+                            <p class="animate-item">Hội An từng là thương cảng sầm uất bậc nhất Đông Nam Á. Nơi đây lưu
+                                giữ nguyên vẹn vẻ đẹp cổ kính với những ngôi nhà mái ngói rêu phong, tường vàng nghệ đặc
+                                trưng và đèn lồng rực rỡ.</p>
+                            <h3 class="animate-item">Giao Thoa Kiến Trúc</h3>
+                            <p class="animate-item">Kiến trúc Hội An là sự kết hợp tinh tế giữa văn hóa Việt, Hoa, Nhật
+                                và Pháp, thể hiện rõ nhất qua Chùa Cầu và các Hội quán cổ.</p>
+                            <h3 class="animate-item">Trải Nghiệm Độc Đáo</h3>
+                            <ul class="animate-item">
+                                <li>🏮 <strong>Thả Đèn Hoa Đăng:</strong> Lung linh trên sông Hoài</li>
+                                <li>🌉 <strong>Chùa Cầu:</strong> Biểu tượng lịch sử hơn 400 năm</li>
+                                <li>☕ <strong>Cafe Phố Cổ:</strong> Ngắm hoàng hôn trên mái nhà</li>
+                            </ul>
+                            <h3 class="animate-item">Gợi Ý</h3>
+                            <p class="animate-item">🍜 Đặc sản: Cao Lầu, Mì Quảng, Bánh Mì Phượng</p>
+                            <p class="animate-item">👗 May đo áo dài lấy ngay trong ngày</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mỹ Sơn -->
+                <div class="modal-landmark" id="modal-myson">
+                    <div class="modal-image">
+                        <img src="https://hoangthanhthanglong.vn/wp-content/uploads/2023/05/myson2.jpg"
+                            alt="Thánh Địa Mỹ Sơn">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Thánh Địa Mỹ Sơn</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Duy Xuyên, Quảng Nam</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Dấu Tích Chăm Pa</h3>
+                            <p class="animate-item">Mỹ Sơn là quần thể di tích đền đài Chăm Pa cổ đại, nơi từng là trung
+                                tâm cúng tế các vị vua Chăm. Các tháp được xây bằng gạch nung với kỹ thuật bí ẩn chưa có
+                                lời giải.</p>
+                            <h3 class="animate-item">Vẻ Đẹp Bí Ẩn</h3>
+                            <p class="animate-item">Nằm trong thung lũng kín đáo, Mỹ Sơn mang vẻ đẹp u tịch, cổ kính và
+                                linh thiêng, được ví như "Angkor Wat" của Việt Nam.</p>
+                            <h3 class="animate-item">Điểm Nhấn</h3>
+                            <ul class="animate-item">
+                                <li>🧱 <strong>Tháp Chàm:</strong> Kiến trúc gạch nung tinh xảo</li>
+                                <li>💃 <strong>Múa Apsara:</strong> Biểu diễn nghệ thuật Chăm đặc sắc</li>
+                                <li>🌄 <strong>Bình Minh:</strong> Khoảnh khắc đẹp nhất tại thung lũng</li>
+                            </ul>
+                            <h3 class="animate-item">Thông Tin Đi Lại</h3>
+                            <p class="animate-item">🚗 Cách Hội An: 40km (1 giờ đi xe)</p>
+                            <p class="animate-item">🎫 Giá vé: 150.000đ (Kèm xe điện)</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sapa -->
+                <div class="modal-landmark" id="modal-sapa">
+                    <div class="modal-image">
+                        <img src="https://dulichkhatvongviet.com/wp-content/uploads/2018/06/kinh-nghiem-du-lich-tay-bac-thang-12.jpg"
+                            alt="Sapa">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Sapa - Thị Trấn Trong Sương</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Lào Cai, Tây Bắc</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Tuyệt Tác Ruộng Bậc Thang</h3>
+                            <p class="animate-item">Sapa mê hoặc du khách với những thửa ruộng bậc thang vàng óng mùa
+                                lúa chín, biển mây bồng bềnh và khí hậu mát mẻ quanh năm mang âm hưởng Châu Âu.</p>
+                            <h3 class="animate-item">Văn Hóa Bản Địa</h3>
+                            <p class="animate-item">Nơi sinh sống của các dân tộc H'Mông, Dao đỏ,... với những phiên chợ
+                                tình độc đáo và trang phục thổ cẩm rực rỡ sắc màu.</p>
+                            <h3 class="animate-item">Khám Phá</h3>
+                            <ul class="animate-item">
+                                <li>🏔️ <strong>Đỉnh Fansipan:</strong> Nóc nhà Đông Dương (3.143m)</li>
+                                <li>🛖 <strong>Bản Cát Cát:</strong> Ngôi làng cổ đẹp nhất Tây Bắc</li>
+                                <li>🚠 <strong>Cáp Treo:</strong> Trải nghiệm săn mây ấn tượng</li>
+                            </ul>
+                            <h3 class="animate-item">Thời Điểm Đẹp</h3>
+                            <p class="animate-item">🍂 Tháng 9-10: Mùa lúa chín vàng</p>
+                            <p class="animate-item">❄️ Tháng 12-1: Săn tuyết rơi và băng giá</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cố Đô Huế -->
+                <div class="modal-landmark" id="modal-hue">
+                    <div class="modal-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSfKjZ3dKLCqACKCaSCWmar0TcUtWeiWYo9A&s"
+                            alt="Đại Nội Huế">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Cố Đô Huế</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Thừa Thiên Huế</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Vàng Son Một Thuở</h3>
+                            <p class="animate-item">Huế mộng mơ với dòng sông Hương êm đềm và Kinh thành Huế uy nghiêm -
+                                nơi chứng kiến sự hưng thịnh và suy vong của triều đại phong kiến cuối cùng Việt Nam.
+                            </p>
+                            <h3 class="animate-item">Kiến Trúc Cung Đình</h3>
+                            <p class="animate-item">Hệ thống lăng tẩm, đền đài được xây dựng hài hòa với thiên nhiên,
+                                mang đậm triết lý phương Đông và vẻ đẹp trầm mặc.</p>
+                            <h3 class="animate-item">Di Sản</h3>
+                            <ul class="animate-item">
+                                <li>🏯 <strong>Đại Nội:</strong> Ngọ Môn, Điện Thái Hòa uy nghi</li>
+                                <li>👑 <strong>Lăng Tẩm:</strong> Lăng Khải Định, Tự Đức, Minh Mạng</li>
+                                <li>🎵 <strong>Nhã Nhạc:</strong> Di sản âm nhạc cung đình Huế</li>
+                            </ul>
+                            <h3 class="animate-item">Ẩm Thực</h3>
+                            <p class="animate-item">🍜 Bún Bò Huế, Cơm Hến, Chè Cung Đình</p>
+                            <p class="animate-item">👗 Trải nghiệm mặc áo Nhật Bình chụp ảnh</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đà Lạt -->
+                <div class="modal-landmark" id="modal-dalat">
+                    <div class="modal-image">
+                        <img src="https://image.vietgoing.com/article/large/8-diem-du-lich-chup-hinh-dep-nhat-o-da-lat.jpg"
+                            alt="Đà Lạt">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Đà Lạt - Thành Phố Ngàn Hoa</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Lâm Đồng, Tây Nguyên</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Tiểu Paris</h3>
+                            <p class="animate-item">Đà Lạt quyến rũ với khí hậu se lạnh, những biệt thự Pháp cổ kính ẩn
+                                mình trong rừng thông và muôn ngàn loài hoa khoe sắc quanh năm.</p>
+                            <h3 class="animate-item">Thành Phố Tình Yêu</h3>
+                            <p class="animate-item">Điểm đến lãng mạn bậc nhất với hồ Xuân Hương thơ mộng, Thung lũng
+                                Tình Yêu và những quán cafe view đồi cực "chill".</p>
+                            <h3 class="animate-item">Check-in</h3>
+                            <ul class="animate-item">
+                                <li>🌸 <strong>Quảng Trường Lâm Viên:</strong> Nụ hoa Atiso khổng lồ</li>
+                                <li>🚂 <strong>Ga Đà Lạt:</strong> Nhà ga cổ đẹp nhất Đông Dương</li>
+                                <li>⛰️ <strong>Langbiang:</strong> Ngắm toàn cảnh thành phố từ trên cao</li>
+                            </ul>
+                            <h3 class="animate-item">Đặc Sản</h3>
+                            <p class="animate-item">🍓 Dâu tây, Bánh tráng nướng, Sữa đậu nành nóng</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đà Nẵng -->
+                <div class="modal-landmark" id="modal-danang">
+                    <div class="modal-image">
+                        <img src="https://nads.1cdn.vn/2025/01/10/W_ban-chieu7.jpg" alt="Đà Nẵng">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Đà Nẵng - Thành Phố Đáng Sống</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Miền Trung Việt Nam</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Năng Động & Hiện Đại</h3>
+                            <p class="animate-item">Đà Nẵng là sự kết hợp hoàn hảo giữa núi, biển và đô thị hiện đại.
+                                Nổi tiếng với những cây cầu độc đáo và bãi biển Mỹ Khê quyến rũ.</p>
+                            <h3 class="animate-item">Điểm Đến Giải Trí</h3>
+                            <p class="animate-item">Sở hữu Bà Nà Hills đường lên tiên cảnh và bán đảo Sơn Trà hoang sơ,
+                                Đà Nẵng luôn mang lại trải nghiệm mới mẻ.</p>
+                            <h3 class="animate-item">Must-Go</h3>
+                            <ul class="animate-item">
+                                <li>🌉 <strong>Cầu Rồng:</strong> Phun lửa và nước vào cuối tuần</li>
+                                <li>🖐️ <strong>Cầu Vàng:</strong> Hiện tượng du lịch toàn cầu</li>
+                                <li>⛰️ <strong>Ngũ Hành Sơn:</strong> Hang động và chùa chiền huyền bí</li>
+                            </ul>
+                            <h3 class="animate-item">Sự Kiện</h3>
+                            <p class="animate-item">🎆 Lễ hội Pháo hoa Quốc tế (DIFF) hàng năm</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phú Quốc -->
+                <div class="modal-landmark" id="modal-phuquoc">
+                    <div class="modal-image">
+                        <img src="https://onlinebooking.vn/wp-content/uploads/tour-dao-phu-quoc-lan-ngam-san-ho-chup-anh-check-in-4.jpg"
+                            alt="Phú Quốc">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Đảo Ngọc Phú Quốc</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Kiên Giang</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Thiên Đường Biển Đảo</h3>
+                            <p class="animate-item">Hòn đảo lớn nhất Việt Nam với những bãi biển cát trắng mịn, nước
+                                trong vắt màu ngọc bích và hoàng hôn rực lửa đẹp nhất Việt Nam.</p>
+                            <h3 class="animate-item">Vui Chơi Không Ngủ</h3>
+                            <p class="animate-item">Thành phố không ngủ Grand World và các tổ hợp vui chơi giải trí hàng
+                                đầu thế giới biến nơi đây thành thiên đường nghỉ dưỡng.</p>
+                            <h3 class="animate-item">Trải Nghiệm</h3>
+                            <ul class="animate-item">
+                                <li>⭐ <strong>Bãi Sao:</strong> Bãi biển đẹp tựa thiên đường</li>
+                                <li>🦁 <strong>VinWonders & Safari:</strong> Công viên chủ đề tầm cỡ</li>
+                                <li>🚠 <strong>Cáp Treo Hòn Thơm:</strong> Cáp treo vượt biển dài nhất TG</li>
+                            </ul>
+                            <h3 class="animate-item">Đặc Sản</h3>
+                            <p class="animate-item">🐟 Nước mắm, Hồ tiêu, Gỏi cá trích, Bún quậy</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tây Ninh -->
+                <div class="modal-landmark" id="modal-tayninh">
+                    <div class="modal-image">
+                        <img src="https://hnm.1cdn.vn/2023/08/03/a125.jpg" alt="Tây Ninh">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Tây Ninh - Vùng Đất Linh Thiêng</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Đông Nam Bộ</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Tín Ngưỡng Độc Đáo</h3>
+                            <p class="animate-item">Cái nôi của đạo Cao Đài với Tòa Thánh Tây Ninh kiến trúc lộng lẫy,
+                                rực rỡ sắc màu, pha trộn tinh hoa triết học Đông - Tây.</p>
+                            <h3 class="animate-item">Nóc Nhà Nam Bộ</h3>
+                            <p class="animate-item">Núi Bà Đen hùng vĩ, mây phủ quanh năm, là điểm săn mây và hành hương
+                                nổi tiếng bậc nhất phương Nam.</p>
+                            <h3 class="animate-item">Khám Phá</h3>
+                            <ul class="animate-item">
+                                <li>🕍 <strong>Tòa Thánh:</strong> Kiến trúc Long Mã bái sư độc nhất</li>
+                                <li>☁️ <strong>Núi Bà Đen:</strong> Trải nghiệm cáp treo lên đỉnh mây</li>
+                                <li>🏞️ <strong>Hồ Dầu Tiếng:</strong> Điểm cắm trại cực chill</li>
+                            </ul>
+                            <h3 class="animate-item">Ẩm Thực</h3>
+                            <p class="animate-item">🥩 Bò tơ Tây Ninh, Muối tôm, Bánh tráng phơi sương</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ninh Bình -->
+                <div class="modal-landmark" id="modal-ninhbinh">
+                    <div class="modal-image">
+                        <img src="https://ik.imagekit.io/tvlk/dam/i/01k82q086vxmtqy76w1chxzq3x.jpeg" alt="Ninh Bình">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Ninh Bình - Tràng An</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Ninh Bình</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Hạ Long Trên Cạn</h3>
+                            <p class="animate-item">Sở hữu vẻ đẹp sơn thủy hữu tình với hệ thống hang động, núi đá vôi
+                                ngập nước và những cánh đồng lúa chín vàng dọc hai bên bờ sông.</p>
+                            <h3 class="animate-item">Kinh Đô Đá</h3>
+                            <p class="animate-item">Nơi từng là kinh đô của 3 triều đại vua Việt Nam, lưu giữ khí phách
+                                hào hùng ngàn năm lịch sử.</p>
+                            <h3 class="animate-item">Điểm Đến</h3>
+                            <ul class="animate-item">
+                                <li>🚣 <strong>Tràng An:</strong> Di sản kép thế giới UNESCO</li>
+                                <li>🐉 <strong>Hang Múa:</strong> "Vạn Lý Trường Thành" thu nhỏ</li>
+                                <li>🛕 <strong>Chùa Bái Đính:</strong> Quần thể chùa lớn nhất ĐNA</li>
+                            </ul>
+                            <h3 class="animate-item">Đặc Sản</h3>
+                            <p class="animate-item">🐐 Thịt dê núi, Cơm cháy, Rượu Kim Sơn</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cần Thơ -->
+                <div class="modal-landmark" id="modal-cantho">
+                    <div class="modal-image">
+                        <img src="https://cuongdulich.com/assets/posts/1572320406-sapa_2.jpg" alt="Cần Thơ">
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-header">
+                            <h2 class="animate-item">Cần Thơ - Tây Đô</h2>
+                        </div>
+                        <p class="modal-location animate-item">📍 Đồng Bằng Sông Cửu Long</p>
+                        <div class="modal-description">
+                            <h3 class="animate-item">Sông Nước Miệt Vườn</h3>
+                            <p class="animate-item">Thủ phủ miền Tây với nét văn hóa chợ nổi độc đáo, những vườn trái
+                                cây trĩu quả và con người hào sảng, chất phác.</p>
+                            <h3 class="animate-item">Vẻ Đẹp Bình Dị</h3>
+                            <p class="animate-item">Bến Ninh Kiều lung linh về đêm hay những chiếc ghe thuyền tấp nập
+                                buổi sớm mai tạo nên bức tranh quê hương yên bình.</p>
+                            <h3 class="animate-item">Trải Nghiệm</h3>
+                            <ul class="animate-item">
+                                <li>🛶 <strong>Chợ Nổi Cái Răng:</strong> Văn hóa mua bán trên sông</li>
+                                <li>🏛️ <strong>Nhà Cổ Bình Thủy:</strong> Kiến trúc Pháp - Việt cổ kính</li>
+                                <li>🍊 <strong>Vườn Trái Cây:</strong> Thưởng thức trái cây tại vườn</li>
+                            </ul>
+                            <h3 class="animate-item">Ẩm Thực</h3>
+                            <p class="animate-item">🥘 Lẩu mắm, Bánh xèo, Cá lóc nướng trui</p>
+                        </div>
+                        <div class="modal-footer animate-item">
+                            <button class="booking-btn-large">Đặt Phòng Ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -52,4 +52,55 @@ document.querySelector('.cta-button')?.addEventListener('click', function () {
     });
 });
 
+// Modal Functions
+function openModal(landmarkId) {
+    const modal = document.getElementById('landmarkModal');
+    const landmarkContent = document.getElementById('modal-' + landmarkId);
+
+    // Hide all landmark content
+    document.querySelectorAll('.modal-landmark').forEach(el => {
+        el.classList.remove('active');
+        // Reset animations
+        el.querySelectorAll('.animate-item').forEach(item => {
+            item.classList.remove('visible');
+        });
+    });
+
+    // Show selected landmark
+    if (landmarkContent) {
+        landmarkContent.classList.add('active');
+
+        // Trigger animations with long delay for slow-motion effect
+        const items = landmarkContent.querySelectorAll('.animate-item');
+        items.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('visible');
+            }, 300 + (index * 400)); // Very Slow Cascade (400ms gap)
+        });
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeModal() {
+    const modal = document.getElementById('landmarkModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Close modal when clicking outside
+document.getElementById('landmarkModal')?.addEventListener('click', function (e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// Close modal with ESC key
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
 console.log('🌿 Du Lịch Việt - Website loaded successfully!');
